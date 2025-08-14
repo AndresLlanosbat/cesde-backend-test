@@ -78,7 +78,7 @@ mvn spring-boot:run
 {
   "status": 200,
   "message": "Mensaje de respuesta",
-  "data": [...]
+  "data": []
 }
 ````
 
