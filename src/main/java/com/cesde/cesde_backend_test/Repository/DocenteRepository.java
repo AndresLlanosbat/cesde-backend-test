@@ -17,7 +17,6 @@ public interface DocenteRepository extends JpaRepository<Docente, UUID> {
 
     List<Docente> findByCorreoContainingIgnoreCase(String correo);
 
-    // Filtros combinados
     @Query("SELECT d FROM Docente d " +
             "WHERE (:nombre IS NULL OR LOWER(d.nombre) LIKE LOWER(CONCAT('%', :nombre, '%'))) " +
             "AND (:documento IS NULL OR d.documento = :documento) " +

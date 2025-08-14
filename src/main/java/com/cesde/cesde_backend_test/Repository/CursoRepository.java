@@ -18,7 +18,6 @@ public interface CursoRepository extends JpaRepository<Curso, UUID> {
 
     List<Curso> findByDocente_Id(UUID docenteId);
 
-    // Si quieres filtros combinados
     @Query("SELECT c FROM Curso c " +
             "WHERE (:nombre IS NULL OR LOWER(c.nombre) LIKE LOWER(CONCAT('%', :nombre, '%'))) " +
             "AND (:precioMin IS NULL OR c.precio >= :precioMin) " +
