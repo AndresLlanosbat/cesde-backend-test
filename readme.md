@@ -17,18 +17,16 @@ Permite gestionar cursos y docentes, así como realizar búsquedas filtradas.
 ---
 
 ## Estructura del proyecto
-src/
-├─ main/java/com/cesde/cesde_backend_test/
-│ ├─ controller/ → Controladores REST
-│ ├─ service/ → Interfaces de servicios
-│ ├─ serviceImpl/ → Implementaciones de servicios
-│ ├─ entity/ → Entidades JPA
-│ ├─ dto/ → Objetos de transporte de datos
-│ ├─ repository/ → Repositorios JPA
-│ └─ CesdeBackendTestApplication.java → Clase principal
-└─ main/resources/
-├─ application.properties
-
+    src/
+        ├─ main/java/com/cesde/cesde_backend_test/
+        │ ├─ controller/ → Controladores REST
+        │ ├─ service/ → Interfaces de servicios
+        │ ├─ serviceImpl/ → Implementaciones de servicios
+        │ ├─ entity/ → Entidades JPA
+        │ ├─ repository/ → Repositorios JPA
+        │ └─ CesdeBackendTestApplication.java → Clase principal
+        └─ main/resources/
+            ├─ application.properties
 ---
 
 ## Configuración de la base de datos (PostgreSQL)
@@ -182,9 +180,6 @@ GET /api/docentes/filtrar/correo?correo=juan@example.com
 ```
 GET /api/docentes/buscar-docente?nombre=Juan&documento=123456789
 ```
-
-**Nota:** Retorna un `List<Docente>` sin envolver en `ApiResponse`.
-
 ---
 
 ## Endpoints de Cursos (`/api/cursos`)
