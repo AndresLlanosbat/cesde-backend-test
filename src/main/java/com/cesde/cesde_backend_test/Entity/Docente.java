@@ -5,7 +5,7 @@ import lombok.Data;
 
 import java.util.UUID;
 
-@Table(name = "docentes")
+@Table(name = "docentes", schema = "public")
 @Entity
 @Data
 public class Docente {
@@ -22,6 +22,4 @@ public class Docente {
 
     @Column(name = "correo")
     private String correo;
-
-
 }

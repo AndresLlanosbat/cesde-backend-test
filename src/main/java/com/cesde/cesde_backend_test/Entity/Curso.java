@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-@Table(name = "cursos")
+@Table(name = "cursos", schema = "public")
 @Entity
 @Data
 public class Curso {
@@ -31,7 +31,7 @@ public class Curso {
     @Column(name = "fecha_inicio", nullable = false)
     private LocalDateTime fechaInicio;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "docente_id", referencedColumnName = "id", nullable = false)
     private Docente docente;
 }
